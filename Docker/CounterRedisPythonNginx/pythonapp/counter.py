@@ -1,6 +1,6 @@
 from flask import Flask
 import redis
-from fix_nginx import ReverseProxied
+#from fix_nginx import ReverseProxied
 app = Flask(__name__)
 #app.wsgi_app = ReverseProxied(app.wsgi_app)
 

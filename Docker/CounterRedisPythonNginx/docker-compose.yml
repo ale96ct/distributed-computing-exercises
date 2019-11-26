@@ -1,17 +1,13 @@
 version: '3'
 services:
     counter:
-        build: pythonapp/
+        image: ale96ct/my-counter-redis-python-nginx:latest
         links:
             - redis
-        volumes:
-            - ./pythonapp:/app
     frontend:
-        build: frontend/
+        image: ale96ct/my-frontend:latest
         ports:
             - "8080:80"
-        volumes:
-            - ./frontend/src:/webapp
         links:
             - counter
     redis:
